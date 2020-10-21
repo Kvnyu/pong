@@ -1,0 +1,73 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!--Forgot to refresh css cache >.>-->
+    <script src="./dist/pong.js"></script>
+</head>
+<body class="background-color">
+<div class="container">
+    <h1 class='text-center'>Pong</h1>
+    <div class="row">
+        <div class="col"></div>
+
+        <div class="col-10 text-center">
+
+            <svg  id="canvas" width="600" height="700"  >
+
+                <rect class="rectangle-style" height="600" rx="10" ry="10" width="600"></rect>
+                <text id = "player1score" x="10" y="40" fill="white">Points</text>
+                <text id = "player1" x="10" y="20" fill="white">Player 1</text>
+                <text id = "player2score" x="515" y="40" fill="white">Points</text>
+                <text id = "player2" x="515" y="20" fill="white">Player 2</text>
+                <g fill="none" stroke="white" stroke-width="2">
+
+                <g id="friendlypaddle" transform="translate(0,0)">
+                    <rect x="0" y="0" width="10" height="50" rx="2" ry="2" fill="white"/>
+                </g>
+                <g id="enemypaddle" transform="translate(0,0)">
+                    <rect x="0" y="0" width="10" height="50" rx="2" ry="2" fill="white"/>
+                </g>
+                <g id="ball" transform="translate(0,0)">
+                    <rect x="0" y="0" width="8" height="8" rx="2" ry="2" fill="white"/>
+                </g>
+
+                    <path stroke-dasharray="5,5" d="M300 0 V600" />
+
+                </g>
+                <g id="blocker" transform="translate(225,225)" fill="#1a1b1e" style = "display: none">
+                    <rect x="0" y="0" width="150" height="150" rx="2" ry="2" />
+                </g>
+
+                <g transform ="translate(255,265)" >
+                    <text id = "gameOver" fill = "white"style = "display: none" >Game Over</text>
+
+                </g>
+                  <g transform ="translate(236,300)" >
+                      <text id = "winner" fill="white" style = "display: none">Player 1 wins</text>
+
+                </g>
+                <g id = "playButtonGroup" transform ="translate(252,342)" style = "display: none">
+                    <text id ="playText" fill = "white">Play Again</text>
+                    <rect id ="playButton" class="button-style" x="-11" y="-16" width = "120" height = "25"></rect>
+
+
+                </g>
+
+
+
+            </svg>
+
+
+
+        </div>
+        <div class="col"></div>
+
+
+
+
+    </div>
+    <div class="text-center">Press up/down arrow key to move paddle up/down</div>
+    <div class="text-center">Small feature: The ball accelerates every time it hits a surface</div>
+</div>
+</body>
+</html>
